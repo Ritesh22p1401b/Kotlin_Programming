@@ -16,12 +16,23 @@ fun main() {
     val asc = Array(5) { i -> (i * i).toString() }
     asc.forEach { print(it) }
     println()
-    
+
 
     val lettersArray = arrayOf("c", "d")
     printAllStrings("a", "b", *lettersArray)
 
+
+    val simpleArray = arrayOf(1, 2, 3)
+    val anotherArray = arrayOf(1, 2, 3)
+
+
+    println(simpleArray.contentEquals(anotherArray))
+    simpleArray[0] = 10
+    println(simpleArray contentEquals anotherArray)
+
 }
+
+
 
 fun printAllStrings(vararg strings: String) {
     for (string in strings) {
