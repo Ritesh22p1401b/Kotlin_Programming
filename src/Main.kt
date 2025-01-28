@@ -30,6 +30,8 @@ fun main() {
     simpleArray[0] = 10
     println(simpleArray contentEquals anotherArray)
 
+
+
 }
 
 
