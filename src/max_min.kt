@@ -7,20 +7,17 @@ fun main() {
     val arr = Array(n){
         read.nextInt()
     }
-    for (i in 0 until n - 1) {
-        var swapped = false
-        for (j in 0 until n - i - 1) {
-            if (arr[j] > arr[j + 1]) {
-                // Swap elements
-                val temp = arr[j]
-                arr[j] = arr[j + 1]
-                arr[j + 1] = temp
-                swapped = true
-            }
+    var max = arr[0]
+    var min = arr[0]
+
+    for(num in arr){
+        if(num<min){
+            min = num
         }
-        // If no two elements were swapped in the inner loop, the array is sorted
-        if (!swapped) break
+        if(num>max){
+            max=num
+        }
     }
-    println("Min ${arr.first()} ")
-    println("Max ${arr.last()}")
+    println(min)
+    println(max)
 }
